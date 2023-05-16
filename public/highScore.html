@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Space Invaders</title>
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+
+      <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-database.js"></script>
+
+      <script type="text/javascript" src="JS/index.js"></script>
+
+      <link rel="stylesheet" href="JS/JQuery/jquery.mobile-1.4.5.min.css"/>
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script type="text/javascript" src="node_modules/phaser/build/phaser.js"></script>
+      <script src="JS/JQuery/jquery.mobile-1.4.5.min.js"></script>
+
+      <script type="text/javascript" src="JS/highScore.js"></script>
+
+  </head>
+  <body padding="0">
+
+  <script>
+      getDBData();
+  </script>
+
+  <div data-role="page" id="display" data-theme="b">
+
+      <div data-role="header">
+          <h1>High Scores</h1>
+      </div>
+
+
+
+      <div data-role="content">
+
+          <ol id="subjectlist" data-role="listview" data-inset="true" style="align-content: center"></ol>
+
+      </div>
+
+
+
+  </div>
+
+
+  </body>
+</html>

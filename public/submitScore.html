@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Space Invaders</title>
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+
+      <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-database.js"></script>
+
+      <script type="text/javascript" src="JS/index.js"></script>
+
+      <link rel="stylesheet" href="JS/JQuery/jquery.mobile-1.4.5.min.css"/>
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script type="text/javascript" src="node_modules/phaser/build/phaser.js"></script>
+      <script src="JS/JQuery/jquery.mobile-1.4.5.min.js"></script>
+
+      <script type="text/javascript" src="JS/highScore.js"></script>
+
+  </head>
+  <body padding="0">
+
+  <script>
+      getDBData();
+  </script>
+
+  <div data-role="page" id="input" data-theme="b">
+
+      <div data-role="header">
+          <h1 id="userpresent">Submit Score</h1>
+      </div>
+
+      <div data-role="content">
+
+          <p id="parascore"><script>
+              var totscore = localStorage.getItem("score");
+              document.getElementById("parascore").innerHTML = totscore.toString();</script></p>
+          <n/>
+          <input type="text" id="addscore" placeholder="Name">
+          <button href="" id="submit" type="button" onclick="callwrite()">Submit</button>
+
+          <script id="callwrite">
+              function callwrite() {
+                  writeUserScore();
+                  window.open("highScore.html", "_self");
+              }
+
+          </script>
+
+      </div>
+
+  </div>
+
+
+  </body>
+</html>
